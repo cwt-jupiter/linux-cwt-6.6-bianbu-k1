@@ -1,0 +1,64 @@
+From 856195cd5a96f580568d1559d0a7613dc79b9462 Mon Sep 17 00:00:00 2001
+From: Icenowy Zheng <uwu@icenowy.me>
+Date: Sat, 31 Aug 2024 23:09:02 +0800
+Subject: [PATCH] riscv: dts: milkv-jupiter: set 40 and 55 degree C trips to
+ active
+
+According to the device tree binding documents, the "active" trip type
+is for enabling extra cooling equipments (e.g. fan) and the "passive"
+trip type is for thermal throttling, and with current DT setup CPU will
+start to throttle at 40 degree celsuis, which is'nt acceptable at all.
+
+Set the first two trip points to active to prevent thermal throttling
+when these trip points get triggered.
+
+Signed-off-by: Icenowy Zheng <uwu@icenowy.me>
+---
+ arch/riscv/boot/dts/spacemit/k1-x_milkv-jupiter.dts | 4 ++--
+ arch/riscv/boot/dts/spacemit/m1-x_milkv-jupiter.dts | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/arch/riscv/boot/dts/spacemit/k1-x_milkv-jupiter.dts b/arch/riscv/boot/dts/spacemit/k1-x_milkv-jupiter.dts
+index a066c7891..a33f18c7d 100644
+--- a/arch/riscv/boot/dts/spacemit/k1-x_milkv-jupiter.dts
++++ b/arch/riscv/boot/dts/spacemit/k1-x_milkv-jupiter.dts
+@@ -1039,13 +1039,13 @@ trips {
+ 			top_trip0: top-trip0 {
+ 				temperature = <40000>;
+ 				hysteresis = <5000>;
+-				type = "passive";
++				type = "active";
+ 			};
+ 
+ 			top_trip1: top-trip1 {
+ 				temperature = <55000>;
+ 				hysteresis = <5000>;
+-				type = "passive";
++				type = "active";
+ 			};
+ 
+ 			top_trip2: top-trip2 {
+diff --git a/arch/riscv/boot/dts/spacemit/m1-x_milkv-jupiter.dts b/arch/riscv/boot/dts/spacemit/m1-x_milkv-jupiter.dts
+index 2d0566a2a..5b6740294 100644
+--- a/arch/riscv/boot/dts/spacemit/m1-x_milkv-jupiter.dts
++++ b/arch/riscv/boot/dts/spacemit/m1-x_milkv-jupiter.dts
+@@ -1040,13 +1040,13 @@ trips {
+ 			top_trip0: top-trip0 {
+ 				temperature = <40000>;
+ 				hysteresis = <5000>;
+-				type = "passive";
++				type = "active";
+ 			};
+ 
+ 			top_trip1: top-trip1 {
+ 				temperature = <55000>;
+ 				hysteresis = <5000>;
+-				type = "passive";
++				type = "active";
+ 			};
+ 
+ 			top_trip2: top-trip2 {
+-- 
+Gitee
+
+
