@@ -1,13 +1,13 @@
 diff --git a/drivers/pwm/Kconfig b/drivers/pwm/Kconfig
-index d3988a213..3ac65ef54 100644
+index 256bb5b4f..c4fe9f533 100644
 --- a/drivers/pwm/Kconfig
 +++ b/drivers/pwm/Kconfig
-@@ -442,7 +442,7 @@ config PWM_PCA9685
+@@ -464,7 +464,7 @@ config PWM_PCA9685
  
  config PWM_PXA
  	tristate "PXA PWM support"
--	depends on ARCH_PXA || COMPILE_TEST
-+	depends on ARCH_PXA || SOC_SPACEMIT
+-	depends on ARCH_PXA || ARCH_MMP || COMPILE_TEST
++	depends on ARCH_PXA || ARCH_MMP || SOC_SPACEMIT_K1X
  	depends on HAS_IOMEM
  	help
  	  Generic PWM framework driver for PXA.

@@ -1,0 +1,26 @@
+From adecb86c0a06c69abf222f6eb981ed086f918e1b Mon Sep 17 00:00:00 2001
+From: Jason Montleon <jmontleo@redhat.com>
+Date: Tue, 27 Aug 2024 11:07:27 -0400
+Subject: [PATCH] Add DMA_BUF ns import to amvx
+
+Signed-off-by: Jason Montleon <jmontleo@redhat.com>
+---
+ drivers/media/platform/spacemit/vpu_k1x/mvx_driver.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/drivers/media/platform/spacemit/vpu_k1x/mvx_driver.c b/drivers/media/platform/spacemit/vpu_k1x/mvx_driver.c
+index f61cabe82..5a734ce31 100644
+--- a/drivers/media/platform/spacemit/vpu_k1x/mvx_driver.c
++++ b/drivers/media/platform/spacemit/vpu_k1x/mvx_driver.c
+@@ -39,6 +39,7 @@
+ MODULE_LICENSE("GPL");
+ MODULE_AUTHOR("ARMChina");
+ MODULE_DESCRIPTION("Tiube VPU Driver.");
++MODULE_IMPORT_NS(DMA_BUF);
+ 
+ static int __init mvx_init(void)
+ {
+-- 
+Gitee
+
+
