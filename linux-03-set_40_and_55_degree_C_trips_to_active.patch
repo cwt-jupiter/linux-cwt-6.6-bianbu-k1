@@ -1,0 +1,40 @@
+diff --git a/arch/riscv/boot/dts/spacemit/k1-x_milkv-jupiter.dts b/arch/riscv/boot/dts/spacemit/k1-x_milkv-jupiter.dts
+index f8f4720a7..911b6ceaf 100644
+--- a/arch/riscv/boot/dts/spacemit/k1-x_milkv-jupiter.dts
++++ b/arch/riscv/boot/dts/spacemit/k1-x_milkv-jupiter.dts
+@@ -1073,13 +1073,13 @@ trips {
+ 			top_trip0: top-trip0 {
+ 				temperature = <40000>;
+ 				hysteresis = <5000>;
+-				type = "passive";
++				type = "active";
+ 			};
+ 
+ 			top_trip1: top-trip1 {
+ 				temperature = <55000>;
+ 				hysteresis = <5000>;
+-				type = "passive";
++				type = "active";
+ 			};
+ 
+ 			top_trip2: top-trip2 {
+diff --git a/arch/riscv/boot/dts/spacemit/m1-x_milkv-jupiter.dts b/arch/riscv/boot/dts/spacemit/m1-x_milkv-jupiter.dts
+index e6d74c2d1..46c562a8c 100644
+--- a/arch/riscv/boot/dts/spacemit/m1-x_milkv-jupiter.dts
++++ b/arch/riscv/boot/dts/spacemit/m1-x_milkv-jupiter.dts
+@@ -1070,13 +1070,13 @@ trips {
+ 			top_trip0: top-trip0 {
+ 				temperature = <40000>;
+ 				hysteresis = <5000>;
+-				type = "passive";
++				type = "active";
+ 			};
+ 
+ 			top_trip1: top-trip1 {
+ 				temperature = <55000>;
+ 				hysteresis = <5000>;
+-				type = "passive";
++				type = "active";
+ 			};
+ 
+ 			top_trip2: top-trip2 {
