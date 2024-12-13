@@ -1,7 +1,7 @@
 # mkinitcpio preset file for the linux package
 
 #ALL_config="/etc/mkinitcpio.conf"
-ALL_kver="6.6.44-cwt5-v2.0.2-2"
+ALL_kver="6.6.44-cwt5-v2.0.4-1"
 
 PRESETS=('default')
 
