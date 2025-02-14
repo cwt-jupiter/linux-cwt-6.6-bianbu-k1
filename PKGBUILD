@@ -2,10 +2,10 @@
 
 pkgbase=linux-cwt-6.6-bianbu-k1
 _variant=cwt
-pkgver=2.0.4
-epoch=5 #Based on cwt image version
+pkgver=2.1
+epoch=6 #Based on cwt image version
 pkgrel=1
-_tag=v${pkgver}
+_tag=k1-bl-v${pkgver}-release
 _desc='Linux 6.6.x (-cwt) for SpacemiT K1/M1 RISC-V Board'
 _srcname=linux-6.6-$_tag
 url="https://gitee.com/bianbu-linux/linux-6.6"
@@ -17,33 +17,45 @@ source=("${_srcname}.tar.gz::${url}/repository/archive/${_tag}.tar.gz"
   'linux-01-enable_pxa_pwm_on_spacemit.patch'
   'linux-02-add_DMA_BUF_ns_import_to_amvx.patch'
   'linux-03-set_40_and_55_degree_C_trips_to_active.patch'
-  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.36-37.xz'
-  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.37-38.xz'
-  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.38-39.xz'
-  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.39-40.xz'
-  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.40-41.xz'
-  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.41-42.xz'
-  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.42-43.xz'
-  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.43-44.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.63-64.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.64-65.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.65-66.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.66-67.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.67-68.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.68-69.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.69-70.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.70-71.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.71-72.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.72-73.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.73-74.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.74-75.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.75-76.xz'
+  'https://cdn.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.6.76-77.xz'
   'config'
   'linux.preset'
   '90-linux.hook')
 
-b2sums=('2fc25770604e7ee1a003fdaf5aa77ebba7768e7b71be285f747fc3f279c88f401d9ce0ada4ea1db8fff19882e495f01a235f9303b3c678cff13a69358151d397'
+b2sums=('8bddab145eec572e98bfc6f9fc608a40da9d8591b0708a2bed979cbe64ccd02d53220eeb9d92d724631fe11013f4ddbc45f87c106f2d9a90e85fe69183d217dd'
         '68e98b2f1c26f188eb00f9b2fd9a99ce8652997447245ce54cd9fa7a6a83321b6af05d0f95758966adbe0ece2ba8acbb54b2f76ebff41fb89db1059455df0263'
         'd263dd25901c7fc67047053d912d05e5e01f25c79affd60bd86bc3864063d705b474a3a4b293e0588001e0fa0d654ef3f107ff65680794463268518591e560a7'
         'cc5b4df2bd64da09df05b9fe369fa65e5b181dc2c96e277b80a6ab3a95531564e4b6ee7a91c38df3cfdc525931b7046be4060fe1c2d05f75d07c36788478f773'
-        '9ead007697740845ec078eca08185253e09fa814d5d604bb8ea4e3513a648ce9426d52df9a1dda2b1579ad695103defac8b6d1817372121b34fe935843b74551'
-        'acc675cadd969d7673fa291ed24f1f89ac795444b3a037887f5c4dad701e3098f620306b7cfe611271e70f6058623b92b88f43042c33936e5b555c0319d345f5'
-        '48988d33bfa157efd1efdcd5bc5f5493b0e07a67e6635e8d7b6cd9f2720746280354eff5235d631a39528225fae204848866e4fffd2c5d807c4b89eba031e759'
-        '63b09ab4e02374417efaa75c3981286a23864f4f68f82fe96b4e147a90b2e3b031acee2813bb4b772b4a8de7d6e0a7ff0dc6c40b924f3715a7d78ef1cb71bfd5'
-        'a11fb16f90a5fce6e8ec902c56ae274d3fbe32003805c2b4f2a8838f70446bc911ef0522fedf06210e69565f62a54c56010fb15817a4ed99fd979124a51cac4d'
-        'bb1576008debbb53ac9eae2f8947039eebde4c217ed63cb6177159104293b02a4571768cbf463af91dd7ad48365626c2cfdea77dcf904e40baff31a2180ce038'
-        'b148688413b5d140b534e14e6310ba3aea79e42c07bd0ff040317f0e0f7f74c049e85763b875d1c58699681f727b54b928daa5f9e1f6292a54133660c2c73209'
-        '7b9fd25bf45b7d9915fcb0eecfd0f5a60273ad62914ace2f3c41c34f7d6401e50ba9d212763970c17ae430805a116dd33d22d7e829b297bc58b401e73aa2f5a4'
-        '563ef19c4098e41171b9fc0e6bb1bb608e05219bfc570db3c590864fc4982a588b5522b2df690892644121ef62dc24be8bbbb7423ee9813ccd1cb8991d2b06a0'
-        '68964192302e7634af17e4b4d1dfc1288f2a9fb484c106d81ecf0471618edc68d4b10b55e933368574a0702b5c5aeac95546c8c2ce3d0829c2e581c9a4ef7039'
-        '08465e06846d97fc9ae728ae3c72cacc0d98fa3c5bba825048fe5743c41a3ab869b250b541dfa8b1311ccd5fd9d79d13b97544fa57fdff42e7f3dbfce72c49c1')
+        'fbac780711077fcf254ca6f46903ff5c958b0fd119130f3660b53283791a7a9e40060077cfe1a9a0436f1e649e61159e0352afe44a43c9d6b17c262a80e8738f'
+        '5aa7ed4a8f289fe844f53f1178c0147749ab4a7471010291f4aa75cfdd7ce1361487f56d08c6f7612bda57a7a90fcd9516c4bccc79d831c0ef92e401ff5f4bab'
+        '1363c98dc5ab59e87dc6c713cca4fbee5588f80e87544dfe2e6f916fcfd6c71706553f6de0be762154a3e92230d8671940fed941e031e03c867b86d2236318dc'
+        '4b005211271cf3c2c1ca640ee0305d468c22300afdb1deeef1afe8678b3f0d536855a9336e260f55f7e4b4da70e83309496b227c837e5f0263e663231c5f6e49'
+        '128eb85c748b04002936ebf47e02a3bca53706493739e6369727abe216c90949e1127af35f05d9216547685e1e5f59d70a116951790b046e50e6ec21cb996474'
+        '2815d71964ee11b7f84b8d7280ea0d408c6e9b507670c23a3ea906a423754aa350e4ae3501123bdfd25e34d664c25829015e731c0e480700e5a6de4cb2be1442'
+        '9f5fd93610caf92f6e39e34cec79782648645aeada191723d63ae5c97f5dd97f28af1b672f097a126338b79c39c861ec7e1a731edd88bea3cbd458bb09466dae'
+        'b4196fb0e864cce22cbd1e2e5da3675d0e9f70a63c5f773e9dfa95052efbba77a1fc10dbb28dc27b5c88f98336d4604db7580f9ba33892011e2a663f8afd7bff'
+        'c56245c69a361c082b07e74a2cc1d86590d2b2b058a5a670279cfe54f1689bef2c6fa9b3ff6d2128fc573fa0a4bbf143db37216f81a19b08c11003a70254c0ee'
+        '41d7640ccbee16bf5a6b05fc465372a34f41d8f98add3ba74a217455bb1f5c14819a7f83655c91be54e3b161dbc646f55d9c13ca764bf686d8add66c4fa4db37'
+        'be2307f42a9fd0a36b86d2cb0b9cf3f7520954479b7db7d4287bf41bf34811f7e140b6a74ce49fe355e72d7401e07d052d3362dab418c0f0d787c0decdf8a992'
+        '195dde44b44b153741c7d8d115924bf3cb96ed22d84f46c018c24000bf8ad6e6b8895715fd0f4e789db58a7795a5bfdad23230755b7e9b3207adcfbb62bcc37c'
+        '891484c39a68cb393e97655805a300c4a4680ee0ca63ed369e8c4ac67f22c717924deed96a69cdd7b07199aa57ca6ab8bbfdd214e107ceac42649475ef7af6d3'
+        '3e869f7cb0a813bd5155f75fd20b68638654bdf3cad70c67603d9ac3f39171a69bfa1baa9703989d931f68f39d3721784dab2c5c3a67b50d0074df2239e03fd9'
+        '665bc1e1a3d38c8bcf1c6e67a9a312ef6c148e2a7135bc6b50e340b289a922903b857ebfcbeea9b7904bc386c57a7413428bf4de8f8716ad4f6c62c4dc2a5128'
+        'ec011f2f5402070f7140c764bee3fe8ccb999d5099faeca2f80fed9feb7ec5a8551dc57cbdd0f2aaf7a6516c879e2af32126a523b9ba66b70b2a67bcd8122075'
+        '3352363e263150f090850b7334a7c94c225ecc11b7d447246ab42c07cc591346fca355e477016db27148f407a3d812f258c983fd513e67ee69b8deda9d060c1a')
 
 prepare() {
   cd $_srcname
@@ -61,8 +73,8 @@ prepare() {
 
   echo "Setting version..."
   echo "-${_variant}${epoch}" >localversion.10-variant
-  echo "-${_tag}" >localversion.20-pkgver
-  echo "-$pkgrel" >localversion.30-pkgrel
+  echo "-v${pkgver}" >localversion.20-pkgver
+  echo "-${pkgrel}" >localversion.30-pkgrel
 
   echo "Setting config..."
   cp ../config .config
